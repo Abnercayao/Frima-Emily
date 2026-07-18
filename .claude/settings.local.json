@@ -8,7 +8,15 @@
       "Bash(git pull *)",
       "Bash(dir /s /b)",
       "Bash(git add *)",
-      "Bash(git commit -m ' *)"
+      "Bash(git commit -m ' *)",
+      "Bash(git push *)",
+      "Bash(timeout 120 git push origin main)",
+      "mcp__claude-in-chrome__navigate",
+      "mcp__claude-in-chrome__select_browser",
+      "mcp__claude-in-chrome__computer",
+      "mcp__claude-in-chrome__tabs_context_mcp",
+      "mcp__claude-in-chrome__find",
+      "mcp__claude-in-chrome__read_page"
     ]
   }
 }
