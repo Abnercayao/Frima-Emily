@@ -1,0 +1,9 @@
+{
+  "name": "frima",
+  "version": "1.0.0",
+  "description": "Boutique Frima - tienda online",
+  "private": true,
+  "dependencies": {
+    "mercadopago": "^2.0.15"
+  }
+}

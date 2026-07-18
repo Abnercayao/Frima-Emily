@@ -1,0 +1,1052 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Frima — Boutique de Moda Femenina | Envíos a todo el Perú</title>
+<meta name="description" content="Frima · Boutique de moda femenina. Vestidos, tops y conjuntos seleccionados. Compra online y paga con Yape. Envíos a todo el Perú.">
+<meta name="keywords" content="moda mujer, boutique Perú, vestidos, ropa femenina, Yape, tienda online Perú, Frima">
+<link rel="canonical" href="https://frima.netlify.app/">
+<!-- Open Graph (cómo se ve al compartir el link) -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://frima.netlify.app/">
+<meta property="og:title" content="Frima — Boutique de Moda Femenina">
+<meta property="og:description" content="Prendas seleccionadas para la mujer que viste con intención. Envíos a todo el Perú · Pago con Yape.">
+<meta property="og:image" content="https://frima.netlify.app/fotos/frima-hero.jpg">
+<meta property="og:image:width" content="1000">
+<meta property="og:image:height" content="1130">
+<meta property="og:locale" content="es_PE">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Frima — Boutique de Moda Femenina">
+<meta name="twitter:description" content="Prendas seleccionadas. Envíos a todo el Perú · Pago con Yape o tarjeta.">
+<meta name="twitter:image" content="https://frima.netlify.app/fotos/frima-hero.jpg">
+<meta name="theme-color" content="#6f5b48">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%236f5b48'/%3E%3Ctext x='32' y='46' font-family='Georgia,serif' font-size='40' fill='%23f7f2ec' text-anchor='middle'%3EF%3C/text%3E%3C/svg%3E">
+<link rel="preload" as="image" href="fotos/frima-hero.jpg" fetchpriority="high">
+<!-- Datos de negocio para Google -->
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Store","name":"Frima","url":"https://frima.netlify.app/","description":"Boutique de moda femenina con envíos a todo el Perú.","image":"https://frima.netlify.app/fotos/frima-hero.jpg","address":{"@type":"PostalAddress","addressCountry":"PE"},"telephone":"+51973717038","areaServed":"PE","currenciesAccepted":"PEN","paymentAccepted":"Yape"}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  /* ============================================================
+     ⚙️  CONFIGURACIÓN RÁPIDA — edita SOLO estos valores
+     ============================================================ */
+  :root{
+    --crema:#f7f2ec; --arena:#ece2d4; --taupe:#b8a48c; --cacao:#6f5b48;
+    --texto:#3b322a; --gris:#9a8e80; --borde:#e3d8c8; --blanco:#fffdfa; --verde:#8a9a7b;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{font-family:'Jost',system-ui,sans-serif;background:var(--crema);color:var(--texto);line-height:1.6;font-weight:300}
+  body.lock{overflow:hidden}
+  :focus-visible{outline:2px solid var(--cacao);outline-offset:2px}
+  @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important}html{scroll-behavior:auto}}
+  h1,h2,h3,h4,.serif{font-family:'Cormorant Garamond',Georgia,serif}
+  img{max-width:100%;display:block}
+  a{color:inherit;text-decoration:none}
+
+  .topbar{background:var(--cacao);color:var(--crema);text-align:center;font-size:.74rem;letter-spacing:2px;text-transform:uppercase;padding:8px 12px;font-weight:400}
+  .topbar span{display:inline-block;transition:opacity .4s}
+
+  header{position:sticky;top:0;z-index:50;background:rgba(247,242,236,.94);backdrop-filter:blur(10px);border-bottom:1px solid var(--borde);display:flex;align-items:center;justify-content:space-between;padding:16px 6%;gap:16px}
+  .logo{font-family:'Cormorant Garamond',serif;font-size:2rem;font-weight:700;color:var(--cacao);letter-spacing:4px;text-transform:uppercase}
+  nav{display:flex;gap:28px;font-size:.82rem;letter-spacing:1.5px;text-transform:uppercase;font-weight:400}
+  nav a{color:var(--texto);transition:.2s}
+  nav a:hover{color:var(--taupe)}
+  .head-actions{display:flex;align-items:center;gap:18px}
+  .icon-btn{background:none;border:none;cursor:pointer;color:var(--texto);display:flex;align-items:center;gap:6px;font-size:.82rem;letter-spacing:1px;text-transform:uppercase;font-family:'Jost'}
+  .icon-btn:hover{color:var(--taupe)}
+  .icon-btn svg{width:19px;height:19px;stroke:currentColor;fill:none;stroke-width:1.6}
+  .cart-count{background:var(--cacao);color:#fff;border-radius:50%;width:19px;height:19px;font-size:.7rem;display:flex;align-items:center;justify-content:center}
+  .menu-toggle{display:none;background:none;border:none;cursor:pointer;color:var(--cacao);padding:4px}
+  .menu-toggle svg{width:24px;height:24px;stroke:currentColor;fill:none;stroke-width:1.8;display:block}
+
+  /* Menú móvil */
+  .mnav{position:fixed;top:0;left:0;bottom:0;width:300px;max-width:84vw;background:var(--crema);z-index:100;transform:translateX(-105%);transition:.32s;display:flex;flex-direction:column;padding:24px 28px;box-shadow:8px 0 40px rgba(0,0,0,.12)}
+  .mnav.open{transform:none}
+  .mnav-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:22px}
+  .mnav .mlink{font-family:'Cormorant Garamond',serif;font-size:1.65rem;font-weight:600;color:var(--cacao);padding:13px 0;border-bottom:1px solid var(--borde)}
+  .mnav-foot{margin-top:auto;font-size:.82rem;color:var(--gris);line-height:2}
+  .mnav-foot a{color:var(--cacao);text-decoration:underline}
+
+  /* Buscador desplegable */
+  .searchbar{max-height:0;overflow:hidden;transition:.3s;background:var(--arena);border-bottom:1px solid var(--borde)}
+  .searchbar.open{max-height:80px}
+  .searchbar input{width:100%;border:none;background:transparent;padding:20px 6%;font-family:'Jost';font-size:1rem;outline:none;color:var(--texto)}
+
+  .hero{position:relative;background:linear-gradient(180deg,var(--arena),var(--crema));overflow:hidden}
+  .hero-inner{display:grid;grid-template-columns:1.05fr .95fr;align-items:center;gap:52px;max-width:1240px;margin:0 auto;padding:56px 6% 72px;min-height:72vh}
+  .hero-copy{max-width:560px}
+  .hero .eyebrow{font-size:.8rem;letter-spacing:4px;text-transform:uppercase;color:var(--taupe);margin-bottom:18px}
+  .hero h1{font-size:clamp(2.5rem,4.6vw,4.2rem);font-weight:600;line-height:1.05;color:var(--cacao);margin-bottom:20px}
+  .hero p{font-size:1.05rem;color:var(--gris);max-width:460px;margin:0 0 32px}
+  .trust{display:flex;flex-wrap:wrap;gap:10px 24px;margin-top:36px;padding-top:22px;border-top:1px solid var(--borde)}
+  .trust span{font-size:.73rem;letter-spacing:1.5px;text-transform:uppercase;color:var(--gris);display:flex;align-items:center;gap:8px}
+  .trust i{font-style:normal;color:var(--verde);font-weight:600}
+  .hero-photo{position:relative;aspect-ratio:4/5;width:100%;max-width:430px;justify-self:end}
+  .hero-photo img{position:relative;z-index:1;width:100%;height:100%;object-fit:cover}
+  .hero-photo::after{content:"";position:absolute;inset:0;transform:translate(16px,16px);border:1px solid var(--taupe)}
+  .btn{display:inline-block;background:var(--cacao);color:var(--crema);padding:15px 42px;font-size:.8rem;letter-spacing:2.5px;text-transform:uppercase;transition:.25s;border:1px solid var(--cacao);cursor:pointer;font-family:'Jost';font-weight:400}
+  .btn:hover{background:transparent;color:var(--cacao)}
+
+  .section-head{text-align:center;margin:70px 0 8px}
+  .section-head .eyebrow{font-size:.75rem;letter-spacing:3px;text-transform:uppercase;color:var(--taupe);margin-bottom:8px}
+  .section-head h2{font-size:clamp(2rem,4vw,2.8rem);font-weight:600;color:var(--cacao)}
+  .section-sub{text-align:center;color:var(--gris);margin-bottom:30px}
+
+  /* Controles de catálogo */
+  .controls{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:14px;padding:0 6% 26px;max-width:1320px;margin:0 auto}
+  .filters{display:flex;flex-wrap:wrap;gap:4px}
+  .filter{background:none;border:none;color:var(--gris);padding:8px 14px;font-size:.8rem;letter-spacing:1.5px;text-transform:uppercase;cursor:pointer;transition:.2s;border-bottom:1.5px solid transparent;font-family:'Jost'}
+  .filter:hover{color:var(--cacao)}
+  .filter.active{color:var(--cacao);border-color:var(--cacao)}
+  .sort-sel{border:1px solid var(--borde);background:var(--blanco);color:var(--texto);padding:9px 14px;font-family:'Jost';font-size:.8rem;letter-spacing:1px;cursor:pointer;outline:none}
+
+  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:34px 26px;padding:0 6% 80px;max-width:1320px;margin:0 auto}
+  .empty-msg{text-align:center;color:var(--gris);grid-column:1/-1;padding:40px}
+  .card{display:flex;flex-direction:column;animation:fade .35s ease both}
+  .low-stock{font-size:.7rem;letter-spacing:1.2px;text-transform:uppercase;color:#a85f38;margin-top:7px}
+  .card .img-wrap{position:relative;aspect-ratio:3/4;background:var(--arena);overflow:hidden;margin-bottom:14px;cursor:pointer}
+  .card .img-wrap img{width:100%;height:100%;object-fit:cover;transition:.6s ease}
+  .card:hover .img-wrap img{transform:scale(1.05)}
+  .badge{position:absolute;top:14px;left:14px;background:var(--crema);color:var(--cacao);font-size:.66rem;letter-spacing:1.5px;text-transform:uppercase;padding:5px 12px}
+  .qv-hint{position:absolute;left:0;right:0;bottom:0;background:rgba(111,91,72,.92);color:var(--crema);text-align:center;padding:11px;font-size:.74rem;letter-spacing:1.5px;text-transform:uppercase;transform:translateY(100%);transition:.25s}
+  .card .img-wrap:hover .qv-hint{transform:translateY(0)}
+  .card-cat{font-size:.68rem;text-transform:uppercase;letter-spacing:2px;color:var(--taupe);margin-bottom:5px}
+  .card-name{font-family:'Cormorant Garamond',serif;font-size:1.35rem;font-weight:600;margin-bottom:6px;line-height:1.2;cursor:pointer}
+  .card-name:hover{color:var(--cacao)}
+  .card-price{font-size:1rem;color:var(--cacao)}
+  .card-price small{font-size:.85rem;color:var(--gris);text-decoration:line-through;margin-left:8px}
+  .sizes{display:flex;flex-wrap:wrap;gap:6px;margin-top:12px}
+  .size-chip{min-width:32px;padding:6px 9px;border:1px solid var(--borde);font-size:.74rem;color:var(--gris);cursor:pointer;transition:.15s;text-align:center;background:var(--blanco);font-family:'Jost',sans-serif;line-height:1.2}
+  .size-chip:hover{border-color:var(--cacao);color:var(--cacao)}
+  .size-chip.sel{background:var(--cacao);color:#fff;border-color:var(--cacao)}
+  .size-chip.off{opacity:.45;text-decoration:line-through;cursor:not-allowed;background:var(--arena);color:var(--gris)}
+  .size-chip.off:hover{border-color:var(--borde);color:var(--gris)}
+  .price-consultar{color:var(--gris);font-size:.9rem;font-style:italic}
+  .sizes-label{font-size:.7rem;letter-spacing:1px;text-transform:uppercase;color:var(--gris);margin-top:13px;display:flex;justify-content:space-between}
+  .guide-link{color:var(--cacao);cursor:pointer;text-decoration:underline}
+  .add-btn{margin-top:14px;background:transparent;color:var(--cacao);border:1px solid var(--cacao);padding:12px;font-size:.75rem;letter-spacing:2px;text-transform:uppercase;cursor:pointer;transition:.2s;font-family:'Jost'}
+  .add-btn:hover{background:var(--cacao);color:var(--crema)}
+
+  /* Tira de envíos */
+  .shipping-strip{background:var(--cacao);color:var(--crema);display:flex;flex-wrap:wrap;justify-content:center;gap:50px;padding:40px 6%}
+  .ship-item{text-align:center;max-width:230px}
+  .ship-item .ico{font-size:1.4rem;margin-bottom:8px}
+  .ship-item h4{font-size:1.2rem;font-weight:600;margin-bottom:4px}
+  .ship-item p{font-size:.85rem;opacity:.85}
+
+  /* Testimonios */
+  .reviews{padding:20px 6% 80px;max-width:1100px;margin:0 auto}
+  .review-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:22px}
+  .review{background:var(--blanco);border:1px solid var(--borde);padding:28px}
+  .stars{color:var(--taupe);letter-spacing:3px;margin-bottom:12px}
+  .review p{font-style:italic;color:var(--texto);margin-bottom:14px;font-weight:300}
+  .review .who{font-size:.8rem;letter-spacing:1px;text-transform:uppercase;color:var(--gris)}
+
+  .story{background:var(--arena);padding:80px 6%}
+  .story-grid{max-width:1060px;margin:0 auto;display:grid;grid-template-columns:.85fr 1.15fr;gap:60px;align-items:center}
+  .story-photo{position:relative;aspect-ratio:4/5;width:100%;max-width:370px;justify-self:center}
+  .story-photo img{position:relative;z-index:1;width:100%;height:100%;object-fit:cover}
+  .story-photo::after{content:"";position:absolute;inset:0;transform:translate(-14px,14px);border:1px solid var(--cacao);opacity:.45}
+  .story .eyebrow{font-size:.75rem;letter-spacing:3px;text-transform:uppercase;color:var(--taupe);margin-bottom:14px}
+  .story h2{font-size:clamp(1.8rem,3.5vw,2.6rem);font-weight:600;color:var(--cacao);margin:0 0 18px;line-height:1.3}
+  .story p{color:var(--gris);margin:0 0 12px}
+  .story .firma{font-family:'Cormorant Garamond',serif;font-size:1.35rem;font-style:italic;color:var(--cacao);margin-top:20px}
+
+  footer{background:var(--cacao);color:var(--crema);padding:60px 6% 30px;text-align:center}
+  footer .logo{color:var(--crema);margin-bottom:14px}
+  footer p{font-size:.9rem;opacity:.85;margin-bottom:6px}
+  footer .social{margin:18px 0;font-size:.82rem;letter-spacing:1.5px;text-transform:uppercase}
+  footer .social a{margin:0 10px;border-bottom:1px solid transparent;transition:.2s}
+  footer .social a:hover{border-color:var(--crema)}
+  footer .small{font-size:.74rem;opacity:.55;margin-top:24px;letter-spacing:1px}
+
+  /* Carrito */
+  .overlay{position:fixed;inset:0;background:rgba(40,32,25,.45);opacity:0;visibility:hidden;transition:.3s;z-index:90}
+  .overlay.open{opacity:1;visibility:visible}
+  .cart-panel{position:fixed;top:0;right:0;width:400px;max-width:92vw;height:100%;background:var(--crema);z-index:100;transform:translateX(100%);transition:.35s;display:flex;flex-direction:column;box-shadow:-8px 0 40px rgba(0,0,0,.12)}
+  .cart-panel.open{transform:translateX(0)}
+  .cart-head{display:flex;justify-content:space-between;align-items:center;padding:24px;border-bottom:1px solid var(--borde)}
+  .cart-head h3{font-size:1.5rem;font-weight:600;color:var(--cacao)}
+  .close-x{background:none;border:none;font-size:1.6rem;cursor:pointer;color:var(--gris);line-height:1}
+  .ship-bar{padding:14px 24px;background:var(--arena);font-size:.8rem;color:var(--cacao);text-align:center}
+  .ship-bar .track{height:5px;background:var(--borde);border-radius:5px;margin-top:8px;overflow:hidden}
+  .ship-bar .fill{height:100%;background:var(--verde);width:0;transition:.4s}
+  .cart-items{flex:1;overflow-y:auto;padding:18px 24px}
+  .cart-empty{text-align:center;color:var(--gris);margin-top:60px}
+  .ci{display:flex;gap:14px;padding:16px 0;border-bottom:1px solid var(--borde)}
+  .ci img{width:66px;height:86px;object-fit:cover;background:var(--arena)}
+  .ci-info{flex:1}
+  .ci-info .n{font-family:'Cormorant Garamond',serif;font-weight:600;font-size:1.1rem;line-height:1.2}
+  .ci-size{font-size:.74rem;color:var(--gris);margin-top:2px}
+  .ci-info .p{color:var(--cacao);margin-top:3px;font-size:.92rem}
+  .qty{display:flex;align-items:center;gap:10px;margin-top:8px}
+  .qty button{width:26px;height:26px;border:1px solid var(--borde);background:var(--blanco);cursor:pointer;color:var(--cacao)}
+  .ship-form{text-align:left;margin:6px 0 14px}
+  .ship-form h4{font-family:'Cormorant Garamond',serif;font-size:1.15rem;color:var(--cacao);margin:0 0 8px}
+  .ship-form .row{display:flex;gap:8px;margin-bottom:8px}
+  .ship-form .row>*{flex:1;min-width:0}
+  .ship-form input{width:100%;padding:9px 11px;border:1px solid var(--borde);border-radius:8px;font-size:.86rem;font-family:inherit;background:var(--blanco);color:var(--cacao)}
+  .ship-form input:focus{outline:none;border-color:var(--cacao)}
+  .ship-form input.err{border-color:#d14;background:#fff6f6}
+  .rm{background:none;border:none;color:var(--gris);font-size:.72rem;cursor:pointer;margin-top:6px;letter-spacing:1px;text-transform:uppercase;text-decoration:underline}
+  .cart-foot{padding:24px;border-top:1px solid var(--borde)}
+  .cart-total{display:flex;justify-content:space-between;font-size:1.05rem;margin-bottom:16px;color:var(--cacao);letter-spacing:1px;text-transform:uppercase}
+  .cart-total span:last-child{font-size:1.3rem;font-family:'Cormorant Garamond',serif;font-weight:700}
+  .checkout-btn{width:100%;background:var(--cacao);color:var(--crema);border:1px solid var(--cacao);padding:16px;font-size:.8rem;letter-spacing:2px;text-transform:uppercase;cursor:pointer;transition:.2s;font-family:'Jost'}
+  .checkout-btn:hover{background:transparent;color:var(--cacao)}
+  .checkout-btn:disabled{background:var(--borde);border-color:var(--borde);color:var(--gris);cursor:not-allowed}
+
+  /* Modales */
+  .modal{position:fixed;inset:0;background:rgba(40,32,25,.55);z-index:110;display:none;align-items:center;justify-content:center;padding:20px}
+  .modal.open{display:flex}
+  .modal-box{background:var(--crema);max-width:460px;width:100%;max-height:90vh;overflow-y:auto;padding:36px;text-align:center;position:relative}
+  .modal-box h3{font-size:1.9rem;font-weight:600;color:var(--cacao);margin-bottom:6px}
+  .modal-box .step{font-size:.9rem;color:var(--gris);margin-bottom:20px}
+  .modal .close-x{position:absolute;top:16px;right:20px;z-index:2}
+  /* Quick view */
+  .qv-box{max-width:840px;display:flex;text-align:left;padding:0;overflow:hidden}
+  .qv-gallery{width:48%;background:var(--arena);flex-shrink:0}
+  .qv-main{aspect-ratio:3/4;width:100%}
+  .qv-main img{width:100%;height:100%;object-fit:cover}
+  .qv-thumbs{display:flex;gap:8px;padding:10px}
+  .qv-thumbs img{width:54px;height:68px;object-fit:cover;cursor:pointer;border:2px solid transparent;background:var(--crema)}
+  .qv-thumbs img.sel{border-color:var(--cacao)}
+  .qv-info{padding:40px 34px;flex:1;overflow-y:auto}
+  .qv-info .cat{font-size:.7rem;letter-spacing:2px;text-transform:uppercase;color:var(--taupe);margin-bottom:8px}
+  .qv-info h3{font-size:2rem;text-align:left;margin-bottom:10px}
+  .qv-info .price{font-size:1.3rem;color:var(--cacao);margin-bottom:16px}
+  .qv-info .price small{text-decoration:line-through;color:var(--gris);font-size:1rem;margin-left:8px}
+  .qv-info .desc{color:var(--gris);margin-bottom:20px;font-size:.92rem}
+  .qv-consult{display:block;text-align:center;margin-top:12px;font-size:.78rem;letter-spacing:1px;text-transform:uppercase;color:var(--cacao);text-decoration:underline;cursor:pointer}
+  .yape-card{background:var(--arena);padding:24px;margin-bottom:18px}
+  .yape-qr{width:210px;height:210px;margin:0 auto 14px;background:#fff;border-radius:14px;display:flex;align-items:center;justify-content:center;overflow:hidden;padding:8px;box-shadow:0 2px 10px rgba(40,32,25,.08)}
+  .yape-qr img{width:100%;height:100%;object-fit:contain}
+  .yape-qr .ph{color:var(--gris);font-size:.78rem;padding:10px}
+  .yape-num{font-family:'Cormorant Garamond',serif;font-size:1.9rem;font-weight:700;color:var(--cacao)}
+  .yape-name{font-size:.85rem;color:var(--gris);letter-spacing:1px;text-transform:uppercase}
+  .modal-total{font-size:1.05rem;margin:16px 0;color:var(--cacao);letter-spacing:1px;text-transform:uppercase}
+  .modal-total span{font-family:'Cormorant Garamond',serif;font-size:1.4rem;font-weight:700}
+  .wa-btn{display:flex;align-items:center;justify-content:center;gap:10px;width:100%;background:#25D366;color:#fff;border:none;padding:16px;font-size:.82rem;letter-spacing:1.5px;text-transform:uppercase;cursor:pointer;transition:.2s;font-family:'Jost'}
+  .wa-btn:hover{background:#1da851}
+  .btn-pay{width:100%;background:var(--cacao);color:var(--crema);border:none;padding:17px;font-size:.86rem;letter-spacing:1.5px;text-transform:uppercase;cursor:pointer;transition:.2s;font-family:'Jost';display:flex;align-items:center;justify-content:center;gap:8px}
+  .btn-pay:hover{background:var(--taupe)}
+  .btn-pay:disabled{opacity:.6;cursor:wait}
+  .pay-methods{font-size:.72rem;color:var(--gris);letter-spacing:1px;margin-top:10px}
+  .pay-divider{display:flex;align-items:center;text-align:center;color:var(--gris);font-size:.78rem;letter-spacing:1px;text-transform:uppercase;margin:22px 0 14px}
+  .pay-divider::before,.pay-divider::after{content:"";flex:1;height:1px;background:var(--borde)}
+  .pay-divider span{padding:0 14px}
+  .pay-manual summary{cursor:pointer;color:var(--cacao);font-size:.82rem;letter-spacing:1px;text-transform:uppercase;list-style:none;padding:8px 0}
+  .pay-manual summary::-webkit-details-marker{display:none}
+  .pay-manual summary::before{content:"＋ ";font-weight:600}
+  .pay-manual[open] summary::before{content:"− "}
+  .modal-note{font-size:.78rem;color:var(--gris);margin-top:16px;line-height:1.6}
+  .size-table{width:100%;border-collapse:collapse;font-size:.85rem;margin-top:8px}
+  .size-table th,.size-table td{border:1px solid var(--borde);padding:9px;text-align:center}
+  .size-table th{background:var(--arena);color:var(--cacao);font-weight:500;letter-spacing:1px;text-transform:uppercase;font-size:.74rem}
+  .guide-tip{font-size:.82rem;color:var(--gris);margin-top:16px;text-align:left;line-height:1.7}
+  .modal-box h4{font-size:1.3rem;color:var(--cacao);font-weight:600}
+  .msg-ico{font-size:2.6rem;line-height:1;margin-bottom:12px}
+
+  .wa-float{position:fixed;bottom:92px;right:24px;width:52px;height:52px;background:#25D366;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 6px 22px rgba(37,211,102,.45);z-index:80;transition:.2s}
+  .wa-float:hover{transform:scale(1.08)}
+  .wa-float svg{width:28px;height:28px;fill:#fff}
+
+  .chat-launch{position:fixed;bottom:24px;right:24px;height:56px;background:var(--cacao);color:var(--crema);border:none;border-radius:30px;padding:0 22px 0 18px;display:flex;align-items:center;gap:9px;cursor:pointer;box-shadow:0 6px 22px rgba(111,91,72,.4);z-index:81;font-family:'Jost';font-size:.82rem;letter-spacing:1px;text-transform:uppercase;transition:.2s}
+  .chat-launch:hover{transform:translateY(-2px)}
+  .chat-launch svg{width:22px;height:22px;fill:var(--crema)}
+  .chat-launch.hide{display:none}
+  .chat-win{position:fixed;bottom:24px;right:24px;width:370px;max-width:calc(100vw - 32px);height:560px;max-height:calc(100vh - 48px);background:var(--crema);border-radius:14px;box-shadow:0 16px 50px rgba(40,32,25,.28);z-index:101;display:none;flex-direction:column;overflow:hidden}
+  .chat-win.open{display:flex}
+  .chat-head2{background:var(--cacao);color:var(--crema);padding:16px 18px;display:flex;align-items:center;justify-content:space-between}
+  .chat-head2 .ch-title{display:flex;align-items:center;gap:10px}
+  .chat-head2 .ch-av{width:38px;height:38px;border-radius:50%;background:var(--taupe);display:flex;align-items:center;justify-content:center;font-family:'Cormorant Garamond',serif;font-size:1.2rem;font-weight:700}
+  .chat-head2 h4{font-size:1.15rem;font-weight:600;line-height:1.1}
+  .chat-head2 .ch-status{font-size:.7rem;opacity:.8}
+  .chat-head2 .close-x{color:var(--crema)}
+  .chat-body{flex:1;overflow-y:auto;padding:18px;display:flex;flex-direction:column;gap:12px}
+  .msg{max-width:82%;padding:11px 14px;border-radius:14px;font-size:.9rem;line-height:1.5;animation:fade .25s ease}
+  @keyframes fade{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+  .msg.bot{background:var(--blanco);border:1px solid var(--borde);align-self:flex-start;border-bottom-left-radius:4px}
+  .msg.user{background:var(--cacao);color:var(--crema);align-self:flex-end;border-bottom-right-radius:4px}
+  .quick{display:flex;flex-wrap:wrap;gap:7px;padding:0 18px 12px}
+  .quick button{background:transparent;border:1px solid var(--taupe);color:var(--cacao);padding:7px 13px;border-radius:20px;font-size:.78rem;cursor:pointer;font-family:'Jost';transition:.15s}
+  .quick button:hover{background:var(--taupe);color:var(--crema)}
+  .chat-input{display:flex;border-top:1px solid var(--borde);padding:10px;gap:8px;background:var(--blanco)}
+  .chat-input input{flex:1;border:none;outline:none;font-family:'Jost';font-size:.9rem;padding:8px 10px;background:transparent}
+  .chat-input button{background:var(--cacao);color:var(--crema);border:none;width:40px;height:40px;border-radius:50%;cursor:pointer;font-size:1.1rem;flex-shrink:0}
+  .chat-input button:hover{background:var(--taupe)}
+
+  .toast{position:fixed;bottom:32px;left:50%;transform:translateX(-50%) translateY(100px);background:var(--cacao);color:var(--crema);padding:14px 28px;font-size:.82rem;letter-spacing:1px;z-index:120;opacity:0;transition:.3s}
+  .toast.show{transform:translateX(-50%) translateY(0);opacity:1}
+
+  @media(max-width:900px){
+    .hero-inner{grid-template-columns:1fr;gap:36px;min-height:auto;padding:44px 6% 56px;text-align:center}
+    .hero-copy{margin:0 auto}
+    .hero p{margin:0 auto 30px}
+    .hero-cta,.trust{justify-content:center}
+    .hero-photo{justify-self:center;max-width:380px}
+    .story-grid{grid-template-columns:1fr;gap:40px;text-align:center}
+    .story-photo{max-width:320px}
+  }
+  @media(max-width:760px){
+    nav{display:none}
+    .menu-toggle{display:block}
+    .grid{grid-template-columns:repeat(2,1fr);gap:22px 14px}
+    .card-name{font-size:1.1rem}
+    header{padding:14px 5%}
+    .logo{font-size:1.6rem;letter-spacing:3px}
+    .qv-box{flex-direction:column;max-height:92vh}
+    .qv-gallery{width:100%}
+    .qv-info{padding:24px}
+    .chat-win{bottom:0;right:0;width:100vw;max-width:100vw;height:100vh;max-height:100vh;border-radius:0}
+  }
+</style>
+</head>
+<body>
+
+<div class="topbar" id="topbar"><span id="topbarMsg">Envío gratis en compras desde S/ 240 · Pago seguro con Yape</span></div>
+
+<header>
+  <button class="menu-toggle" id="menuBtn" aria-label="Abrir menú" aria-expanded="false" onclick="openMenu()"><svg viewBox="0 0 24 24"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg></button>
+  <a class="logo" href="#top">Frima</a>
+  <nav>
+    <a href="#catalogo">Tienda</a>
+    <a href="#" onclick="openGuide();return false">Tallas</a>
+    <a href="#envios">Envíos</a>
+    <a href="#historia">Nosotros</a>
+  </nav>
+  <div class="head-actions">
+    <button class="icon-btn" onclick="toggleSearch()" aria-label="Buscar"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></button>
+    <button class="icon-btn" onclick="openCart()" aria-label="Abrir bolsa de compras">Bolsa <span class="cart-count" id="cartCount">0</span></button>
+  </div>
+</header>
+<div class="searchbar" id="searchbar">
+  <input id="searchInput" type="text" placeholder="Buscar prendas..." oninput="onSearch(this.value)" aria-label="Buscar prendas">
+</div>
+
+<!-- Menú móvil -->
+<div class="mnav" id="mnav" role="dialog" aria-modal="true" aria-label="Menú de navegación">
+  <div class="mnav-head"><span class="logo" style="font-size:1.5rem">Frima</span><button class="close-x" onclick="closeMenu()" aria-label="Cerrar menú">&times;</button></div>
+  <a class="mlink" href="#catalogo" onclick="closeMenu()">Tienda</a>
+  <a class="mlink" href="#" onclick="closeMenu();openGuide();return false">Guía de tallas</a>
+  <a class="mlink" href="#envios" onclick="closeMenu()">Envíos</a>
+  <a class="mlink" href="#historia" onclick="closeMenu()">Nosotros</a>
+  <div class="mnav-foot">Atención: Lun – Sáb · 9am – 8pm<br><a href="#" id="mnavWa" target="_blank" rel="noopener">Escríbenos por WhatsApp</a></div>
+</div>
+
+<section class="hero" id="top">
+  <div class="hero-inner">
+    <div class="hero-copy">
+      <div class="eyebrow">Nueva colección</div>
+      <h1>Elegancia que se siente tuya</h1>
+      <p>Prendas seleccionadas para la mujer que viste con intención. Descubre tu próxima favorita.</p>
+      <div class="hero-cta"><a href="#catalogo" class="btn">Ver colección</a></div>
+      <div class="trust">
+        <span><i>✓</i> Envíos a todo el Perú</span>
+        <span><i>✓</i> Yape o tarjeta</span>
+        <span><i>✓</i> Asesoría por WhatsApp</span>
+      </div>
+    </div>
+    <div class="hero-photo"><img src="fotos/frima-hero.jpg" alt="Conjunto celeste de la nueva colección de Frima" width="1000" height="1130" fetchpriority="high"></div>
+  </div>
+</section>
+
+<!-- Destacados -->
+<div class="section-head"><div class="eyebrow">Selección</div><h2>Lo más querido</h2></div>
+<p class="section-sub">Las prendas favoritas de nuestras clientas</p>
+<div class="grid" id="gridFeatured"></div>
+
+<!-- Catálogo completo -->
+<div class="section-head" id="catalogo"><div class="eyebrow">Colección</div><h2>Toda la tienda</h2></div>
+<div class="controls">
+  <div class="filters" id="filters"></div>
+  <select class="sort-sel" id="sortSel" onchange="renderGrid()" aria-label="Ordenar productos">
+    <option value="destacados">Ordenar: Destacados</option>
+    <option value="precio-asc">Precio: menor a mayor</option>
+    <option value="precio-desc">Precio: mayor a menor</option>
+    <option value="nuevos">Novedades primero</option>
+  </select>
+</div>
+<div class="grid" id="grid"></div>
+
+<section class="shipping-strip" id="envios">
+  <div class="ship-item"><div class="ico">✦</div><h4>Envío nacional</h4><p>Lima 1–3 días · Provincia 2–5 días (Shalom/Olva)</p></div>
+  <div class="ship-item"><div class="ico">✦</div><h4>Envío gratis</h4><p>En compras desde S/ 240 a todo el Perú</p></div>
+  <div class="ship-item"><div class="ico">✦</div><h4>Pago con Yape</h4><p>Paga y envía tu comprobante por WhatsApp</p></div>
+</section>
+
+<!-- Testimonios -->
+<div class="section-head"><div class="eyebrow">Clientas felices</div><h2>Lo que dicen de Frima</h2></div>
+<section class="reviews">
+  <div class="review-grid">
+    <div class="review"><div class="stars">★★★★★</div><p>"La tela es hermosa y me quedó tal cual la talla. La atención por WhatsApp súper rápida."</p><div class="who">— Camila R., Lima</div></div>
+    <div class="review"><div class="stars">★★★★★</div><p>"Llegó a Arequipa en 3 días. El conjunto celeste es mi nuevo favorito."</p><div class="who">— Daniela P., Arequipa</div></div>
+    <div class="review"><div class="stars">★★★★★</div><p>"Me asesoraron con la talla y quedó perfecto. Volveré a comprar."</p><div class="who">— Lucía M., Trujillo</div></div>
+  </div>
+</section>
+
+<section class="story" id="historia">
+  <div class="story-grid">
+    <div class="story-photo"><img src="fotos/frima-nosotros.jpg" alt="Emily, fundadora de Frima" loading="lazy" width="1000" height="1130"></div>
+    <div class="story-text">
+      <div class="eyebrow">Nosotros</div>
+      <h2>Moda curada con detalle, para verte y sentirte bien</h2>
+      <p>Seleccionamos cada prenda pensando en calidad, comodidad y estilo. Atención cercana por WhatsApp y envíos a todo el Perú.</p>
+      <p>Cada pieza del catálogo pasa por nuestras manos antes de llegar a las tuyas.</p>
+      <div class="firma">Emily · Fundadora</div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="logo">Frima</div>
+  <p>Boutique de moda femenina</p>
+  <p>Atención: Lunes a Sábado · 9am – 8pm · WhatsApp +51 973 717 038</p>
+  <p>Pagos: Yape · Visa · Mastercard</p>
+  <div class="social"><a href="#" id="footWa">WhatsApp</a> · <a href="https://www.instagram.com/emilysilvasaa/" target="_blank" rel="noopener">Instagram</a></div>
+  <p class="small">© 2026 Frima. Todos los derechos reservados.</p>
+</footer>
+
+<!-- Carrito -->
+<div class="overlay" id="overlay" onclick="closeCart();closeMenu()"></div>
+<aside class="cart-panel" id="cartPanel" role="dialog" aria-modal="true" aria-label="Bolsa de compras">
+  <div class="cart-head"><h3>Tu bolsa</h3><button class="close-x" onclick="closeCart()" aria-label="Cerrar bolsa">&times;</button></div>
+  <div class="ship-bar" id="shipBar"></div>
+  <div class="cart-items" id="cartItems"></div>
+  <div class="cart-foot">
+    <div class="cart-total"><span>Total</span><span id="cartTotal">S/ 0.00</span></div>
+    <button class="checkout-btn" id="checkoutBtn" onclick="openCheckout()">Finalizar compra</button>
+  </div>
+</aside>
+
+<!-- Quick view -->
+<div class="modal" id="qvModal">
+  <div class="modal-box qv-box">
+    <button class="close-x" onclick="closeQV()">&times;</button>
+    <div class="qv-gallery">
+      <div class="qv-main"><img id="qvImg" src="" alt=""></div>
+      <div class="qv-thumbs" id="qvThumbs"></div>
+    </div>
+    <div class="qv-info">
+      <div class="cat" id="qvCat"></div>
+      <h3 id="qvName"></h3>
+      <div class="price" id="qvPrice"></div>
+      <div class="desc" id="qvDesc"></div>
+      <div class="sizes-label"><span>Talla</span><span class="guide-link" onclick="openGuide()">Ver guía</span></div>
+      <div class="sizes" id="qvSizes"></div>
+      <button class="add-btn" style="width:100%;margin-top:18px" id="qvAdd">Añadir a la bolsa</button>
+      <span class="qv-consult" id="qvConsult">Consultar por WhatsApp</span>
+    </div>
+  </div>
+</div>
+
+<!-- Modal guía de tallas -->
+<div class="modal" id="guideModal">
+  <div class="modal-box" style="text-align:left">
+    <button class="close-x" onclick="closeGuide()">&times;</button>
+    <h3 style="text-align:center">Guía de tallas</h3>
+    <p class="step" style="text-align:center">Mide y compara con la tabla (en centímetros)</p>
+    <h4 style="margin:10px 0 0">Blusas, vestidos y conjuntos</h4>
+    <table class="size-table">
+      <tr><th>Talla</th><th>Busto</th><th>Cintura</th><th>Cadera</th></tr>
+      <tr><td>S</td><td>84–88</td><td>64–68</td><td>90–94</td></tr>
+      <tr><td>M</td><td>89–93</td><td>69–73</td><td>95–99</td></tr>
+      <tr><td>L</td><td>94–98</td><td>74–78</td><td>100–104</td></tr>
+      <tr><td>XL</td><td>99–104</td><td>79–84</td><td>105–110</td></tr>
+    </table>
+    <h4 style="margin:18px 0 0">Pantalones y shorts</h4>
+    <table class="size-table">
+      <tr><th>Talla</th><th>Cintura</th><th>Cadera</th></tr>
+      <tr><td>26</td><td>66</td><td>92</td></tr>
+      <tr><td>28</td><td>71</td><td>97</td></tr>
+      <tr><td>30</td><td>76</td><td>102</td></tr>
+      <tr><td>32</td><td>81</td><td>107</td></tr>
+    </table>
+    <p class="guide-tip">Cómo medirte: usa una cinta métrica sobre ropa ligera.<br>
+    • Busto: en la parte más ancha. • Cintura: en la más angosta. • Cadera: en la más ancha.<br>
+    ¿Dudas con tu talla? Escríbenos por WhatsApp y te asesoramos.</p>
+  </div>
+</div>
+
+<!-- Modal de pago -->
+<div class="modal" id="payModal">
+  <div class="modal-box">
+    <button class="close-x" onclick="closeCheckout()" aria-label="Cerrar">&times;</button>
+    <h3>Finalizar compra</h3>
+    <p class="step" id="payStep">Elige cómo quieres pagar</p>
+    <div class="modal-total">Total a pagar: <span id="modalTotal">S/ 0.00</span></div>
+    <div class="ship-form" id="shipForm">
+      <h4>Datos de envío</h4>
+      <div class="row"><input id="c_email" type="email" placeholder="Correo electrónico*"></div>
+      <div class="row"><input id="c_nombre" placeholder="Nombre*"><input id="c_apellidos" placeholder="Apellidos*"></div>
+      <div class="row"><input id="c_doc" placeholder="DNI / RUC*"></div>
+      <div class="row"><input id="c_dir" placeholder="Dirección*"></div>
+      <div class="row"><input id="c_ref" placeholder="Casa, apartamento, referencia (opcional)"></div>
+      <div class="row"><input id="c_distrito" placeholder="Distrito*"><input id="c_provincia" placeholder="Provincia*"></div>
+      <div class="row"><input id="c_ciudad" placeholder="Ciudad / Departamento*"><input id="c_tel" placeholder="Teléfono*"></div>
+    </div>
+    <div id="mpBox">
+      <button class="btn-pay" id="mpBtn" onclick="pagarMP()">Pagar con Yape o Tarjeta</button>
+      <div class="pay-methods">Yape · Visa · Mastercard · Pago seguro con Mercado Pago</div>
+      <div class="pay-divider"><span>o</span></div>
+    </div>
+    <details class="pay-manual" id="manualBox">
+      <summary>Pagar por Yape manual</summary>
+    <div class="yape-card">
+      <div class="yape-qr">
+        <img id="yapeQr" src="fotos/qr-frima.png" alt="QR Yape Frima" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        <div class="ph" style="display:none">Aquí va tu<br>QR de Yape<br><small>(fotos/qr-frima.png)</small></div>
+      </div>
+      <div class="yape-num" id="yapeNum">973 717 038</div>
+      <div class="yape-name" id="yapeName">Emily Valentina Silva Saavedra</div>
+    </div>
+    <button class="wa-btn" onclick="sendWhatsApp()">
+      <svg viewBox="0 0 24 24" width="20" height="20" fill="#fff"><path d="M.057 24l1.687-6.163a11.867 11.867 0 01-1.587-5.946C.16 5.335 5.495 0 12.05 0a11.82 11.82 0 018.413 3.488 11.82 11.82 0 013.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 01-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884a9.86 9.86 0 001.51 5.26l-.999 3.648 3.748-.985zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+      Enviar pedido por WhatsApp
+    </button>
+    <p class="modal-note">Paga al número o QR de Yape y envía tu comprobante por WhatsApp. Coordinamos el envío contigo.</p>
+    </details>
+  </div>
+</div>
+
+<!-- WhatsApp flotante -->
+<a class="wa-float" id="waFloat" target="_blank" rel="noopener" aria-label="WhatsApp">
+  <svg viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163a11.867 11.867 0 01-1.587-5.946C.16 5.335 5.495 0 12.05 0a11.82 11.82 0 018.413 3.488 11.82 11.82 0 013.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 01-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884a9.86 9.86 0 001.51 5.26l-.999 3.648 3.748-.985zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+</a>
+
+<!-- Chatbot -->
+<button class="chat-launch" id="chatLaunch" onclick="openChat()">
+  <svg viewBox="0 0 24 24"><path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zM6 9h12v2H6V9zm8 5H6v-2h8v2zm4-6H6V6h12v2z"/></svg>
+  Ayuda
+</button>
+<div class="chat-win" id="chatWin">
+  <div class="chat-head2">
+    <div class="ch-title"><div class="ch-av">F</div><div><h4>Asistente Frima</h4><div class="ch-status">● En línea</div></div></div>
+    <button class="close-x" onclick="closeChat()">&times;</button>
+  </div>
+  <div class="chat-body" id="chatBody"></div>
+  <div class="quick" id="chatQuick"></div>
+  <div class="chat-input">
+    <input id="chatInput" type="text" placeholder="Escribe tu pregunta..." onkeydown="if(event.key==='Enter')chatSend()">
+    <button onclick="chatSend()" aria-label="Enviar">➤</button>
+  </div>
+</div>
+
+<!-- Modal de mensajes (confirmación de pago, avisos) -->
+<div class="modal" id="msgModal" role="dialog" aria-modal="true">
+  <div class="modal-box" style="max-width:400px">
+    <button class="close-x" onclick="closeMsg()" aria-label="Cerrar">&times;</button>
+    <div class="msg-ico" id="msgIco">💛</div>
+    <h3 id="msgTitle" style="font-size:1.6rem"></h3>
+    <p class="step" id="msgText" style="margin:10px 0 22px"></p>
+    <button class="btn" style="width:100%" onclick="closeMsg()">Entendido</button>
+  </div>
+</div>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script>
+/* ============================================================
+   ⚙️  CONFIGURA TU TIENDA AQUÍ
+   ============================================================ */
+const CONFIG = {
+  whatsapp: "51973717038",
+  yapeNumero: "973 717 038",
+  yapeNombre: "Frima",
+  yapeTitular: "Emily Valentina Silva Saavedra",  // 👉 nombre del titular de la cuenta Yape
+  moneda: "S/",
+  envioGratisDesde: 240,    // 👉 monto para envío gratis (pon 0 para desactivar)
+  mpHabilitado: true,       // 👉 Mercado Pago (Yape+tarjetas). Funciona solo en Netlify
+                            //    con la variable MP_ACCESS_TOKEN configurada.
+  catalogoCSV: "https://docs.google.com/spreadsheets/d/17PUYLMKM37DA8Jr7v8JhRqf2YGOg8VspqZ8YjIKXBN0/gviz/tq?tqx=out:csv&sheet=Cat%C3%A1logo"
+                            // 👉 Hoja de Google conectada. Si la dejas vacía, usa el catálogo interno.
+};
+
+/* ============================================================
+   🛍️  PRODUCTOS
+   img / imgs: rutas de fotos. Para galería usa "imgs":["fotos/a.jpeg","fotos/b.jpeg"].
+   featured:true -> aparece en "Lo más querido".
+   ============================================================ */
+const PRODUCTOS = [
+  {id:1, nombre:"Blusa Blanca Cuello Cuadrado", cat:"Blusas", precio:30, antes:0, imgs:["fotos/catalogo/p01.jpg"], tallas:["S","M","L"], disponibles:["S"], desc:"Blusa de diseño femenino, ideal para el día a día o una ocasión especial."},
+  {id:2, nombre:"Blusa Terracota con Volante", cat:"Blusas", precio:30, antes:0, imgs:["fotos/catalogo/p02.jpg"], tallas:["S","M","L"], disponibles:["S"], desc:"Blusa de diseño femenino, ideal para el día a día o una ocasión especial."},
+  {id:3, nombre:"Blusa Negra con Lazo", cat:"Blusas", precio:35, antes:0, imgs:["fotos/catalogo/p03.jpg"], tallas:["S","M","L"], disponibles:["S"], desc:"Blusa de diseño femenino, ideal para el día a día o una ocasión especial."},
+  {id:4, nombre:"Blusa Negra Manga Abullonada", cat:"Blusas", precio:20, antes:0, imgs:["fotos/catalogo/p04.jpg"], tallas:["S","M","L"], disponibles:["S"], desc:"Blusa de diseño femenino, ideal para el día a día o una ocasión especial."},
+  {id:5, nombre:"Blusa Crema Manga Corta", cat:"Blusas", precio:50, antes:0, imgs:["fotos/catalogo/p05.jpg"], tallas:["S","M","L"], disponibles:["S"], desc:"Blusa de diseño femenino, ideal para el día a día o una ocasión especial."},
+  {id:6, nombre:"Blusa Azul Marino con Volantes", cat:"Blusas", precio:25, antes:0, imgs:["fotos/catalogo/p06.jpg"], tallas:["S","M","L"], disponibles:["M"], desc:"Blusa de diseño femenino, ideal para el día a día o una ocasión especial."},
+  {id:7, nombre:"Blusa Verde Olivo con Volantes", cat:"Blusas", precio:25, antes:0, imgs:["fotos/catalogo/p07.jpg"], tallas:["S","M","L"], disponibles:["L"],featured:true, desc:"Blusa de diseño femenino, ideal para el día a día o una ocasión especial."},
+  {id:8, nombre:"Camisa Fucsia Oversize", cat:"Camisas", precio:30, antes:0, imgs:["fotos/catalogo/p08.jpg"], tallas:["S","M","L"], disponibles:["S"], desc:"Camisa versátil y elegante, fácil de combinar."},
+  {id:9, nombre:"Camisa Rosa a Rayas", cat:"Camisas", precio:30, antes:0, imgs:["fotos/catalogo/p09.jpg"], tallas:["S","M","L"], disponibles:["S"], desc:"Camisa versátil y elegante, fácil de combinar."},
+  {id:10, nombre:"Camisa Blanca Clásica", cat:"Camisas", precio:35, antes:0, imgs:["fotos/catalogo/p10.jpg"], tallas:["S","M","L"], disponibles:["S"], desc:"Camisa versátil y elegante, fácil de combinar."},
+  {id:11, nombre:"Camisa Celeste Satinada", cat:"Camisas", precio:50, antes:0, imgs:["fotos/catalogo/p11.jpg"], tallas:["S","M","L"], disponibles:["S"],featured:true, desc:"Camisa versátil y elegante, fácil de combinar."},
+  {id:12, nombre:"Camisa Blanca Popelina", cat:"Camisas", precio:90, antes:0, imgs:["fotos/catalogo/p12.jpg"], tallas:["S","M","L"], disponibles:["S"], desc:"Camisa versátil y elegante, fácil de combinar."},
+  {id:13, nombre:"Top Beige Manga Larga", cat:"Tops", precio:30, antes:0, imgs:["fotos/catalogo/p13.jpg"], tallas:["S","M","L"], disponibles:["S"], desc:"Top cómodo y favorecedor para cualquier look."},
+  {id:14, nombre:"Top Crema Acanalado", cat:"Tops", precio:20, antes:0, imgs:["fotos/catalogo/p14.jpg"], tallas:["S","M","L"], disponibles:["S"], desc:"Top cómodo y favorecedor para cualquier look."},
+  {id:15, nombre:"Top Negro Acanalado", cat:"Tops", precio:20, antes:0, imgs:["fotos/catalogo/p15.jpg"], tallas:["S","M","L"], disponibles:["S"], desc:"Top cómodo y favorecedor para cualquier look."},
+  {id:16, nombre:"Polo Gris Estampado", cat:"Polos", precio:15, antes:0, imgs:["fotos/catalogo/p16.jpg"], tallas:["S","M","L"], disponibles:["S"], desc:"Polo básico de algodón, esencial en tu clóset."},
+  {id:17, nombre:"Polo Fucsia", cat:"Polos", precio:15, antes:0, imgs:["fotos/catalogo/p17.jpg"], tallas:["S","M","L"], disponibles:["S"], desc:"Polo básico de algodón, esencial en tu clóset."},
+  {id:18, nombre:"Polo Negro", cat:"Polos", precio:20, antes:0, imgs:["fotos/catalogo/p18.jpg"], tallas:["S","M","L"], disponibles:["S"], desc:"Polo básico de algodón, esencial en tu clóset."},
+  {id:19, nombre:"Polo Rojo", cat:"Polos", precio:20, antes:0, imgs:["fotos/catalogo/p19.jpg"], tallas:["S","M","L"], disponibles:["S"], desc:"Polo básico de algodón, esencial en tu clóset."},
+  {id:20, nombre:"Body Negro Escote Cuadrado", cat:"Bodies", precio:15, antes:0, imgs:["fotos/catalogo/p20.jpg"], tallas:["S","M","L"], disponibles:["S"], desc:"Body de ajuste perfecto, ideal con jeans o pantalón."},
+  {id:21, nombre:"Body Negro Rayas Rojas", cat:"Bodies", precio:25, antes:0, imgs:["fotos/catalogo/p21.jpg"], tallas:["S","M","L"], disponibles:[],agotado:true, desc:"Body de ajuste perfecto, ideal con jeans o pantalón."},
+  {id:22, nombre:"Body Negro Rayas Pastel", cat:"Bodies", precio:15, antes:0, imgs:["fotos/catalogo/p22.jpg"], tallas:["S","M","L"], disponibles:["S"], desc:"Body de ajuste perfecto, ideal con jeans o pantalón."},
+  {id:23, nombre:"Body Negro Escote Redondo", cat:"Bodies", precio:15, antes:0, imgs:["fotos/catalogo/p23.jpg"], tallas:["S","M","L"], disponibles:["S"], desc:"Body de ajuste perfecto, ideal con jeans o pantalón."},
+  {id:24, nombre:"Body Blanco Escote Redondo", cat:"Bodies", precio:15, antes:0, imgs:["fotos/catalogo/p24.jpg"], tallas:["S","M","L"], disponibles:["S"], desc:"Body de ajuste perfecto, ideal con jeans o pantalón."},
+  {id:25, nombre:"Body Blanco Escote Cuadrado", cat:"Bodies", precio:15, antes:0, imgs:["fotos/catalogo/p25.jpg"], tallas:["S","M","L"], disponibles:["S"], desc:"Body de ajuste perfecto, ideal con jeans o pantalón."},
+  {id:26, nombre:"Blazer Blanco Crop", cat:"Blazers", precio:45, antes:0, imgs:["fotos/catalogo/p26.jpg"], tallas:["S","M","L"], disponibles:["S"], desc:"Blazer estructurado para un look pulido."},
+  {id:27, nombre:"Blazer Beige", cat:"Blazers", precio:45, antes:0, imgs:["fotos/catalogo/p27.jpg"], tallas:["S","M","L"], disponibles:["S"],featured:true, desc:"Blazer estructurado para un look pulido."},
+  {id:28, nombre:"Pantalón Palazzo Fucsia", cat:"Pantalones", precio:30, antes:0, imgs:["fotos/catalogo/p28.jpg"], tallas:["S","M","L"], disponibles:["S"], desc:"Pantalón de caída elegante y muy cómodo."},
+  {id:29, nombre:"Pantalón Palazzo Sin Bolsillos Azul Marino", cat:"Pantalones", precio:30, antes:0, imgs:["fotos/catalogo/p29.jpg"], tallas:["S","M","L"], disponibles:["S"], desc:"Pantalón de caída elegante y muy cómodo."},
+  {id:30, nombre:"Pantalón Palazzo Rosa", cat:"Pantalones", precio:60, antes:0, imgs:["fotos/catalogo/p30.jpg"], tallas:["S","M","L"], disponibles:["S"],featured:true, desc:"Pantalón de caída elegante y muy cómodo."},
+  {id:31, nombre:"Pantalón Sastre Negro", cat:"Pantalones", precio:60, antes:0, imgs:["fotos/catalogo/p31.jpg"], tallas:["S","M","L"], disponibles:["S"], desc:"Pantalón de caída elegante y muy cómodo."},
+  {id:32, nombre:"Pantalón Palazzo Azul Marino", cat:"Pantalones", precio:60, antes:0, imgs:["fotos/catalogo/p32.jpg"], tallas:["S","M","L"], disponibles:["S"], desc:"Pantalón de caída elegante y muy cómodo."},
+  {id:33, nombre:"Pantalón de Vestir Azul Marino", cat:"Pantalones", precio:110, antes:0, imgs:["fotos/catalogo/p33.jpg"], tallas:["S","M","L"], disponibles:["S"], desc:"Pantalón de caída elegante y muy cómodo."},
+  {id:34, nombre:"Pantalón Palazzo Beige", cat:"Pantalones", precio:140, antes:0, imgs:["fotos/catalogo/p34.jpg"], tallas:["S","M","L"], disponibles:["S"],featured:true, desc:"Pantalón de caída elegante y muy cómodo."},
+  {id:35, nombre:"Pantalón Palazzo Negro", cat:"Pantalones", precio:140, antes:0, imgs:["fotos/catalogo/p35.jpg"], tallas:["S","M","L"], disponibles:["S"], desc:"Pantalón de caída elegante y muy cómodo."},
+  {id:36, nombre:"Pantalón Palo Rosa", cat:"Pantalones", precio:30, antes:0, imgs:["fotos/catalogo/p36.jpg"], tallas:["26","28","30","32"], disponibles:["28"], desc:"Pantalón de caída elegante y muy cómodo."},
+  {id:37, nombre:"Jean Wide Leg", cat:"Jeans", precio:20, antes:0, imgs:["fotos/catalogo/p37.jpg"], tallas:["26","28","30","32"], disponibles:["28"], desc:"Jean de tendencia, corte moderno."},
+  {id:38, nombre:"Short Fruncido Durazno", cat:"Shorts", precio:35, antes:0, imgs:["fotos/catalogo/p38.jpg"], tallas:["S","M","L"], disponibles:["M"], desc:"Short fresco y favorecedor para el verano."},
+  {id:39, nombre:"Bikini Floral", cat:"Ropa de baño", precio:30, antes:0, imgs:["fotos/catalogo/p39.jpg"], tallas:["S","M","L"], disponibles:["S"],featured:true, desc:"Bikini de temporada, perfecto para la playa o piscina."},
+  {id:40, nombre:"Bikini Rojo", cat:"Ropa de baño", precio:30, antes:0, imgs:["fotos/catalogo/p40.jpg"], tallas:["S","M","L"], disponibles:["S"], desc:"Bikini de temporada, perfecto para la playa o piscina."},
+];
+
+/* ============================================================
+   ⚙️  Lógica (no necesitas tocar esto)
+   ============================================================ */
+const tonos=["#ece2d4","#e3d8c8","#dcd0bd","#e8ddcc","#d8cbb6"];
+let cart=JSON.parse(localStorage.getItem("frimaCart")||"[]").filter(i=>i&&i.key);
+let filtroActivo="Todos";
+let busqueda="";
+let seleccion={};
+
+function fmt(n){return CONFIG.moneda+" "+n.toFixed(2)}
+const escH=s=>String(s??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+/* Si solo hay UNA talla disponible, se selecciona sola (menos fricción al comprar) */
+function autoSel(p){const av=disp(p);if(!p.agotado&&av.length===1&&seleccion[p.id]!==av[0])seleccion[p.id]=av[0]}
+/* Aviso de pocas unidades (solo cuando la hoja de Google trae stock numérico) */
+function lowStockHTML(p){
+  if(p.agotado)return"";
+  const ns=disp(p).map(t=>stockOf(p,t)).filter(n=>isFinite(n)&&n>0);
+  if(!ns.length)return"";
+  const total=ns.reduce((a,b)=>a+b,0);
+  if(total===1)return`<div class="low-stock">¡Última unidad!</div>`;
+  if(total<=3)return`<div class="low-stock">Últimas ${total} unidades</div>`;
+  return"";
+}
+function consultar(id){const p=PRODUCTOS.find(x=>x.id===id);if(p)goWhats(`Hola Frima, me interesa: ${p.nombre}. ¿Precio y disponibilidad?`)}
+function firstImg(p){return (p.imgs&&p.imgs.length)?p.imgs[0]:(p.img||"")}
+function placeholder(p){
+  const c=tonos[p.id%tonos.length];
+  return `<svg viewBox='0 0 100 130' xmlns='http://www.w3.org/2000/svg'><rect width='100' height='130' fill='${c}'/><text x='50' y='62' font-size='8' fill='%236f5b48' text-anchor='middle' font-family='serif'>Frima</text><text x='50' y='74' font-size='5' fill='%236f5b48' text-anchor='middle' font-family='sans-serif' opacity='0.7'>foto próximamente</text></svg>`;
+}
+function imgTag(p){
+  const src=firstImg(p);
+  if(src) return `<img src="${src}" alt="${escH(p.nombre)}" loading="lazy" onerror="this.outerHTML=window.__ph(${p.id})">`;
+  return `<div style="width:100%;height:100%">${placeholder(p)}</div>`;
+}
+window.__ph=(id)=>{const p=PRODUCTOS.find(x=>x.id===id);return `<div style="width:100%;height:100%">${placeholder(p)}</div>`};
+function phURI(p){const c=tonos[p.id%tonos.length];const svg="<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 400'><rect width='300' height='400' fill='"+c+"'/><text x='150' y='190' font-size='28' fill='#6f5b48' text-anchor='middle' font-family='serif'>Frima</text><text x='150' y='222' font-size='13' fill='#6f5b48' text-anchor='middle' opacity='0.7'>foto próximamente</text></svg>";return "data:image/svg+xml,"+encodeURIComponent(svg)}
+
+function disp(p){return p.disponibles||p.tallas||[]}
+/* Stock máximo disponible para una talla. Si la prenda no trae control de
+   stock (catálogo interno sin números) devuelve Infinity = sin límite. */
+function stockOf(p,talla){
+  if(!p||!p.stock)return Infinity;
+  if(talla&&talla in p.stock)return p.stock[talla];
+  if(!talla){const v=Object.values(p.stock);if(!v.length)return Infinity;return v.reduce((a,b)=>a+b,0);}
+  return Infinity;
+}
+function precioHTML(p){return p.precio>0?fmt(p.precio)+(p.antes?`<small>${fmt(p.antes)}</small>`:""):`<span class="price-consultar">Consultar precio</span>`}
+function sizesHTML(p){autoSel(p);return (p.tallas||[]).map(t=>{const ok=disp(p).includes(t);
+  return ok?`<button type="button" class="size-chip${seleccion[p.id]===t?' sel':''}" onclick="selectSize(${p.id},'${t}',this)" aria-label="Talla ${t}">${t}</button>`
+           :`<button type="button" class="size-chip off" onclick="showToast('Talla ${t}: no disponible')" aria-label="Talla ${t} no disponible">${t}</button>`}).join("")}
+function botonHTML(p){
+  if(p.agotado) return `<button class="add-btn" disabled style="opacity:.5;cursor:not-allowed">Agotado</button>`;
+  return p.precio>0
+  ?`<button class="add-btn" onclick="addToCart(${p.id})">Añadir a la bolsa</button>`
+  :`<button class="add-btn" onclick="consultar(${p.id})">Consultar por WhatsApp</button>`}
+function cardHTML(p){
+  return `<div class="card">
+    <div class="img-wrap" onclick="openQV(${p.id})">
+      ${p.agotado?`<span class="badge" style="background:var(--cacao);color:var(--crema)">Agotado</span>`:(p.badge?`<span class="badge">${p.badge}</span>`:"")}
+      ${imgTag(p)}
+      <div class="qv-hint">Vista rápida</div>
+    </div>
+    <div class="card-cat">${escH(p.cat)}</div>
+    <div class="card-name" onclick="openQV(${p.id})">${escH(p.nombre)}</div>
+    <div class="card-price">${precioHTML(p)}</div>
+    ${lowStockHTML(p)}
+    ${p.tallas&&p.tallas.length?`
+      <div class="sizes-label"><span>Talla</span><span class="guide-link" onclick="openGuide()">Guía</span></div>
+      <div class="sizes" data-pid="${p.id}">${sizesHTML(p)}</div>`:""}
+    ${botonHTML(p)}
+  </div>`;
+}
+
+function renderFeatured(){
+  document.getElementById("gridFeatured").innerHTML=PRODUCTOS.filter(p=>p.featured).map(cardHTML).join("");
+}
+function renderFilters(){
+  const cats=["Todos",...new Set(PRODUCTOS.map(p=>p.cat))];
+  document.getElementById("filters").innerHTML=cats.map(c=>
+    `<button class="filter ${c===filtroActivo?'active':''}" onclick="setFiltro('${c}')">${c}</button>`).join("");
+}
+function setFiltro(c){filtroActivo=c;renderFilters();renderGrid()}
+function toggleSearch(){
+  const s=document.getElementById("searchbar");s.classList.toggle("open");
+  if(s.classList.contains("open"))document.getElementById("searchInput").focus();
+}
+function onSearch(v){busqueda=v.toLowerCase().trim();renderGrid()}
+
+function renderGrid(){
+  let list=PRODUCTOS.slice();
+  if(filtroActivo!=="Todos")list=list.filter(p=>p.cat===filtroActivo);
+  if(busqueda)list=list.filter(p=>(p.nombre+" "+p.cat).toLowerCase().includes(busqueda));
+  const sort=document.getElementById("sortSel").value;
+  if(sort==="precio-asc")list.sort((a,b)=>a.precio-b.precio);
+  else if(sort==="precio-desc")list.sort((a,b)=>b.precio-a.precio);
+  else if(sort==="nuevos")list.sort((a,b)=>(b.badge==="Nuevo")-(a.badge==="Nuevo"));
+  list.sort((a,b)=>(a.agotado?1:0)-(b.agotado?1:0)); /* agotados siempre al final */
+  const g=document.getElementById("grid");
+  g.innerHTML=list.length?list.map(cardHTML).join(""):`<p class="empty-msg">No encontramos prendas con ese criterio.</p>`;
+}
+
+/* ---- Quick view ---- */
+let qvId=null;
+function openQV(id){
+  const p=PRODUCTOS.find(x=>x.id===id);qvId=id;autoSel(p);
+  document.getElementById("qvCat").textContent=p.cat;
+  document.getElementById("qvName").textContent=p.nombre;
+  document.getElementById("qvPrice").innerHTML=precioHTML(p)+lowStockHTML(p);
+  document.getElementById("qvDesc").textContent=p.desc||"";
+  const imgs=(p.imgs&&p.imgs.length)?p.imgs:null;
+  const main=document.getElementById("qvImg");
+  main.style.display="block";
+  if(imgs){main.src=imgs[0];
+    document.getElementById("qvThumbs").innerHTML=imgs.length>1?imgs.map((s,i)=>`<img src="${s}" class="${i===0?'sel':''}" alt="" onerror="this.remove()" onclick="qvSwap('${s}',this)">`).join(""):"";
+  }else{
+    main.src=phURI(p);
+    document.getElementById("qvThumbs").innerHTML="";
+  }
+  document.getElementById("qvSizes").innerHTML=(p.tallas||[]).map(t=>{const ok=disp(p).includes(t);
+    return ok?`<button type="button" class="size-chip ${seleccion[id]===t?'sel':''}" onclick="selectSizeQV(${id},'${t}',this)" aria-label="Talla ${t}">${t}</button>`
+             :`<button type="button" class="size-chip off" onclick="showToast('Talla ${t}: no disponible')" aria-label="Talla ${t} no disponible">${t}</button>`}).join("");
+  const qa=document.getElementById("qvAdd");
+  if(p.agotado){qa.textContent="Agotado";qa.disabled=true;qa.style.opacity=".5";qa.style.cursor="not-allowed";qa.onclick=null;}
+  else if(p.precio>0){qa.disabled=false;qa.style.opacity="";qa.style.cursor="";qa.textContent="Añadir a la bolsa";qa.onclick=()=>{addToCart(id);closeQV();}}
+  else{qa.disabled=false;qa.style.opacity="";qa.style.cursor="";qa.textContent="Consultar por WhatsApp";qa.onclick=()=>{goWhats(`Hola Frima, me interesa: ${p.nombre}. ¿Precio y disponibilidad?`);}}
+  document.getElementById("qvConsult").onclick=()=>goWhats(`Hola Frima, me interesa: ${p.nombre}. ¿Me das más info?`);
+  document.getElementById("qvModal").classList.add("open");syncLock();
+}
+function qvSwap(src,el){document.getElementById("qvImg").src=src;el.parentElement.querySelectorAll("img").forEach(i=>i.classList.remove("sel"));el.classList.add("sel")}
+function selectSizeQV(id,t,el){seleccion[id]=t;el.parentElement.querySelectorAll(".size-chip").forEach(c=>c.classList.remove("sel"));el.classList.add("sel")}
+function closeQV(){document.getElementById("qvModal").classList.remove("open");syncLock()}
+
+/* ---- Carrito ---- */
+function selectSize(id,talla,el){
+  seleccion[id]=talla;
+  document.querySelectorAll(`.sizes[data-pid='${id}'] .size-chip`).forEach(c=>c.classList.remove("sel"));
+  el.classList.add("sel");
+}
+function addToCart(id){
+  const p=PRODUCTOS.find(x=>x.id===id);
+  if(p.agotado){showToast("Producto agotado");return}
+  if(!p.precio){goWhats(`Hola Frima, me interesa: ${p.nombre}. ¿Precio y disponibilidad?`);return}
+  const talla=(p.tallas&&p.tallas.length)?seleccion[id]:"";
+  if(p.tallas&&p.tallas.length&&!talla){showToast("Elige una talla primero");return}
+  if(talla&&!disp(p).includes(talla)){showToast("Esa talla no está disponible");return}
+  const key=id+"|"+talla;
+  const item=cart.find(i=>i.key===key);
+  const max=stockOf(p,talla);
+  const actual=item?item.qty:0;
+  if(actual+1>max){showToast(max<=0?"Sin stock disponible":`Solo quedan ${max} unidad(es)${talla?` en talla ${talla}`:""}`);return;}
+  if(item)item.qty++;
+  else cart.push({key,id:p.id,nombre:p.nombre,precio:p.precio,img:firstImg(p),talla,qty:1});
+  saveCart();renderCart();showToast("Añadido a la bolsa");openCart();
+}
+function changeQty(key,d){const item=cart.find(i=>i.key===key);if(!item)return;
+  if(d>0){const p=PRODUCTOS.find(x=>x.id===item.id);const max=stockOf(p,item.talla);if(item.qty+d>max){showToast(`Solo quedan ${max} unidad(es) disponibles`);return;}}
+  item.qty+=d;if(item.qty<=0)cart=cart.filter(i=>i.key!==key);saveCart();renderCart()}
+function removeItem(key){cart=cart.filter(i=>i.key!==key);saveCart();renderCart()}
+function cartTotal(){return cart.reduce((s,i)=>s+i.precio*i.qty,0)}
+function cartQty(){return cart.reduce((s,i)=>s+i.qty,0)}
+function saveCart(){localStorage.setItem("frimaCart",JSON.stringify(cart))}
+/* Recorta el carrito al stock real cuando ya cargó el catálogo de la hoja. */
+function sanitizeCartStock(){
+  let changed=false;
+  cart=cart.filter(i=>{
+    const p=PRODUCTOS.find(x=>x.id===i.id);
+    if(!p||p.agotado){changed=true;return false;}
+    const max=stockOf(p,i.talla);
+    if(max<=0){changed=true;return false;}
+    if(i.qty>max){i.qty=max;changed=true;}
+    return true;
+  });
+  if(changed){saveCart();renderCart();}
+}
+
+function renderShipBar(){
+  const bar=document.getElementById("shipBar");const meta=CONFIG.envioGratisDesde;
+  if(!meta){bar.style.display="none";return}
+  const t=cartTotal();
+  if(t===0){bar.innerHTML=`Envío gratis en compras desde ${fmt(meta)}`;return;}
+  if(t>=meta){bar.innerHTML=`🎉 ¡Tienes <b>envío gratis</b>!<div class="track"><div class="fill" style="width:100%"></div></div>`}
+  else{const falta=meta-t;const pct=Math.min(100,t/meta*100);
+    bar.innerHTML=`Te faltan <b>${fmt(falta)}</b> para envío gratis<div class="track"><div class="fill" style="width:${pct}%"></div></div>`}
+}
+function renderCart(){
+  document.getElementById("cartCount").textContent=cartQty();
+  const c=document.getElementById("cartItems");
+  if(!cart.length){c.innerHTML=`<p class="cart-empty">Tu bolsa está vacía<br><small>Descubre nuestra colección</small></p>
+    <div style="text-align:center;margin-top:18px"><button class="add-btn" onclick="closeCart();document.getElementById('catalogo').scrollIntoView({behavior:'smooth'})">Ver colección</button></div>`;
+    document.getElementById("checkoutBtn").disabled=true;
+  }else{
+    c.innerHTML=cart.map(i=>{
+      const p=PRODUCTOS.find(x=>x.id===i.id);
+      const img=i.img?`<img src="${i.img}" alt="" onerror="this.outerHTML=window.__ph(${i.id})">`:`<div style="width:66px;height:86px;overflow:hidden">${placeholder(p)}</div>`;
+      return `<div class="ci">${img}
+        <div class="ci-info"><div class="n">${escH(i.nombre)}</div>
+          ${i.talla?`<div class="ci-size">Talla: ${i.talla}</div>`:""}
+          <div class="p">${fmt(i.precio)}</div>
+          <div class="qty"><button onclick="changeQty('${i.key}',-1)">−</button><span>${i.qty}</span><button onclick="changeQty('${i.key}',1)">+</button></div>
+          <button class="rm" onclick="removeItem('${i.key}')">Eliminar</button>
+        </div></div>`}).join("");
+    document.getElementById("checkoutBtn").disabled=false;
+  }
+  document.getElementById("cartTotal").textContent=fmt(cartTotal());
+  renderShipBar();
+}
+
+/* Bloquea el scroll del fondo cuando hay un panel/modal abierto */
+function syncLock(){
+  const mob=window.matchMedia("(max-width:760px)").matches;
+  const any=document.querySelector(".modal.open,.cart-panel.open,.mnav.open")||(mob&&document.querySelector(".chat-win.open"));
+  document.body.classList.toggle("lock",!!any);
+}
+function openCart(){document.getElementById("cartPanel").classList.add("open");document.getElementById("overlay").classList.add("open");syncLock()}
+function closeCart(){document.getElementById("cartPanel").classList.remove("open");if(!document.querySelector(".mnav.open"))document.getElementById("overlay").classList.remove("open");syncLock()}
+function openMenu(){document.getElementById("mnav").classList.add("open");document.getElementById("overlay").classList.add("open");document.getElementById("menuBtn").setAttribute("aria-expanded","true");syncLock()}
+function closeMenu(){document.getElementById("mnav").classList.remove("open");document.getElementById("menuBtn").setAttribute("aria-expanded","false");if(!document.querySelector(".cart-panel.open"))document.getElementById("overlay").classList.remove("open");syncLock()}
+function openGuide(){document.getElementById("guideModal").classList.add("open");syncLock()}
+function closeGuide(){document.getElementById("guideModal").classList.remove("open");syncLock()}
+function showMsg(ico,titulo,texto){document.getElementById("msgIco").textContent=ico;document.getElementById("msgTitle").textContent=titulo;document.getElementById("msgText").textContent=texto;document.getElementById("msgModal").classList.add("open");syncLock()}
+function closeMsg(){document.getElementById("msgModal").classList.remove("open");syncLock()}
+function openCheckout(){
+  if(!cart.length)return;
+  const n=cartQty();
+  document.getElementById("payStep").textContent=`${n} ${n===1?"artículo":"artículos"} · Elige cómo quieres pagar`;
+  document.getElementById("modalTotal").textContent=fmt(cartTotal());
+  prefillCliente();document.getElementById("payModal").classList.add("open");syncLock();
+}
+function closeCheckout(){document.getElementById("payModal").classList.remove("open");syncLock()}
+
+/* ---- Datos de envío del cliente ---- */
+const CLIENTE_CAMPOS=["email","nombre","apellidos","doc","dir","ref","distrito","provincia","ciudad","tel"];
+const CLIENTE_OBLIG=["email","nombre","apellidos","doc","dir","distrito","provincia","ciudad","tel"];
+function prefillCliente(){
+  const g=JSON.parse(localStorage.getItem("frimaCliente")||"{}");
+  CLIENTE_CAMPOS.forEach(k=>{const el=document.getElementById("c_"+k);if(el&&g[k])el.value=g[k];});
+}
+function getCliente(){
+  const c={};let falta=false;
+  CLIENTE_CAMPOS.forEach(k=>{const el=document.getElementById("c_"+k);const v=el?el.value.trim():"";c[k]=v;
+    if(CLIENTE_OBLIG.includes(k)){if(!v){el.classList.add("err");falta=true;}else el.classList.remove("err");}});
+  const emailEl=document.getElementById("c_email");
+  if(c.email&&!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(c.email)){emailEl.classList.add("err");falta=true;}
+  if(falta){showToast("Completa tus datos de envío");document.getElementById("shipForm").scrollIntoView({behavior:"smooth",block:"center"});return null;}
+  localStorage.setItem("frimaCliente",JSON.stringify(c));
+  return c;
+}
+
+/* ---- Pago con Mercado Pago (Yape + tarjetas) ---- */
+async function pagarMP(){
+  if(!cart.length)return;
+  const cliente=getCliente();
+  if(!cliente)return;
+  const btn=document.getElementById("mpBtn");
+  const txt=btn.textContent;
+  btn.disabled=true;btn.textContent="Conectando con el pago...";
+  const items=cart.map(i=>({
+    title:i.nombre+(i.talla?` (Talla ${i.talla})`:""),
+    quantity:i.qty,
+    unit_price:i.precio
+  }));
+  try{
+    const r=await fetch("/.netlify/functions/crear-pago",{
+      method:"POST",headers:{"Content-Type":"application/json"},
+      body:JSON.stringify({items,cliente,total:cartTotal()})
+    });
+    const d=await r.json();
+    if(d.init_point){window.location.href=d.init_point;return}
+    throw new Error(d.error||"Sin respuesta del pago");
+  }catch(e){
+    btn.disabled=false;btn.textContent=txt;
+    showToast("No se pudo iniciar el pago. Usa el Yape manual o reintenta.");
+    document.getElementById("manualBox").open=true;
+  }
+}
+
+/* Mensaje al volver de Mercado Pago */
+function checkPagoRetorno(){
+  const p=new URLSearchParams(location.search).get("pago");
+  if(!p)return;
+  if(p==="ok"){cart=[];saveCart();renderCart();
+    showMsg("💛","¡Gracias por tu compra!","Tu pago fue aprobado. Te contactaremos por WhatsApp para coordinar el envío.");}
+  else if(p==="pendiente"){showMsg("⏳","Pago pendiente","Tu pago quedó pendiente de confirmación. Te avisaremos en cuanto se acredite.");}
+  else if(p==="error"){showMsg("😕","El pago no se completó","No se realizó ningún cargo. Puedes intentarlo de nuevo cuando quieras.");}
+  history.replaceState({},"",location.pathname);
+}
+
+function sendWhatsApp(){
+  const cliente=getCliente();
+  if(!cliente)return;
+  let msg="¡Hola Frima! Quiero hacer este pedido:%0A%0A";
+  cart.forEach(i=>{msg+=`• ${i.qty}x ${i.nombre}${i.talla?` (Talla ${i.talla})`:""} — ${fmt(i.precio*i.qty)}%0A`});
+  msg+=`%0A*Total: ${fmt(cartTotal())}*`;
+  if(CONFIG.envioGratisDesde&&cartTotal()>=CONFIG.envioGratisDesde)msg+=`%0A(Envío gratis 🎉)`;
+  msg+=`%0A%0A*Datos de envío:*%0A`;
+  msg+=`${cliente.nombre} ${cliente.apellidos}%0A`;
+  msg+=`DNI/RUC: ${cliente.doc}%0A`;
+  msg+=`${cliente.dir}${cliente.ref?` (${cliente.ref})`:""}%0A`;
+  msg+=`${cliente.distrito}, ${cliente.provincia}, ${cliente.ciudad}%0A`;
+  msg+=`Tel: ${cliente.tel} · ${cliente.email}%0A`;
+  msg+=`%0AYa realicé / voy a realizar el pago por Yape. Adjunto mi comprobante.`;
+  window.open(`https://wa.me/${CONFIG.whatsapp}?text=${msg}`,"_blank","noopener");
+}
+function showToast(t){const el=document.getElementById("toast");el.textContent=t;el.classList.add("show");setTimeout(()=>el.classList.remove("show"),1800)}
+
+/* ---- Chatbot ---- */
+const BOT_FAQ=[
+  {claves:["talla","tallas","medida","medidas","size","queda"],resp:`Manejamos tallas S, M, L (y algunas en XL). 📏 Toca "Tallas" en el menú para ver la guía en cm. ¿Te ayudo a elegir la tuya?`},
+  {claves:["envio","envios","envío","envíos","delivery","provincia","llega","demora"],resp:`¡Enviamos a todo el Perú! 📦 Lima: 1–3 días · Provincia: 2–5 días (Shalom/Olva). Y el envío es <b>gratis desde S/ 240</b>.`},
+  {claves:["pago","pagar","yape","plin","transferencia","como pago","cómo pago"],resp:`Pagas con Yape al <b>973 717 038</b> (Frima) 💛. Haces tu pedido, yapeas y envías la captura por WhatsApp.`},
+  {claves:["comprar","pedido","ordenar","como compro","cómo compro","quiero"],resp:`¡Muy fácil! 🛍️ Elige tu prenda y talla → "Añadir a la bolsa" → "Finalizar compra" → paga con Yape y envía tu comprobante por WhatsApp.`},
+  {claves:["cambio","cambios","devolucion","devolución","devolver"],resp:`Aceptamos cambios por talla dentro de 7 días, prenda sin uso y con etiqueta. ✨ Escríbenos por WhatsApp.`},
+  {claves:["horario","atencion","atención","abierto","hora"],resp:`Atendemos Lunes a Sábado, 9am – 8pm 🕘. Por WhatsApp respondemos lo antes posible.`},
+  {claves:["precio","precios","cuanto","cuánto","cuesta","vale"],resp:`Cada prenda muestra su precio debajo de la foto 💛. ¿Hay alguna en especial que te interese?`},
+  {claves:["hola","buenas","buenos dias","buenas tardes","holaa"],resp:`¡Hola! 👋 Bienvenida a Frima. Puedo ayudarte con tallas, envíos, pagos y compras. ¿Qué necesitas?`},
+  {claves:["gracias","thank"],resp:`¡Con gusto! 💛 ¿Quieres que te pase con una asesora por WhatsApp?`},
+  {claves:["instagram","redes","ig"],resp:`Síguenos en Instagram para ver más looks: @emilysilvasaa ✨`},
+];
+const RESP_DEFECTO=`Mmm, esa no la tengo a la mano 🤔 pero una asesora puede ayudarte al toque. ¿Te paso con WhatsApp?`;
+const CHAT_QUICK=["Tallas","Envíos","¿Cómo pago?","¿Cómo comprar?","Hablar con una persona"];
+let chatStarted=false;
+function openChat(){
+  document.getElementById("chatWin").classList.add("open");
+  document.getElementById("chatLaunch").classList.add("hide");
+  if(!chatStarted){chatStarted=true;botSay(`¡Hola! 👋 Soy el asistente de <b>Frima</b>. Te ayudo con tallas, envíos, pagos y tu compra. ¿En qué te ayudo?`);renderQuick();}
+  syncLock();
+}
+function closeChat(){document.getElementById("chatWin").classList.remove("open");document.getElementById("chatLaunch").classList.remove("hide");syncLock()}
+function renderQuick(){document.getElementById("chatQuick").innerHTML=CHAT_QUICK.map(q=>`<button onclick="quickAsk('${q}')">${q}</button>`).join("")}
+function botSay(html){const b=document.getElementById("chatBody");b.insertAdjacentHTML("beforeend",`<div class="msg bot">${html}</div>`);b.scrollTop=b.scrollHeight}
+function userSay(txt){const b=document.getElementById("chatBody");b.insertAdjacentHTML("beforeend",`<div class="msg user">${txt.replace(/</g,"&lt;")}</div>`);b.scrollTop=b.scrollHeight}
+function quickAsk(q){
+  if(q==="Hablar con una persona"){userSay(q);setTimeout(()=>{botSay("¡Claro! Te abro WhatsApp para conversar directamente 💬");goWhats("Hola Frima, quiero hacer una consulta.")},400);return}
+  userSay(q);setTimeout(()=>botReply(q),350);
+}
+function chatSend(){const inp=document.getElementById("chatInput");const txt=inp.value.trim();if(!txt)return;userSay(txt);inp.value="";setTimeout(()=>botReply(txt),350)}
+function botReply(txt){
+  const t=txt.toLowerCase();const hit=BOT_FAQ.find(f=>f.claves.some(k=>t.includes(k)));
+  if(hit){botSay(hit.resp)}
+  else{botSay(RESP_DEFECTO);const b=document.getElementById("chatBody");
+    b.insertAdjacentHTML("beforeend",`<div class="msg bot"><button onclick="goWhats('Hola Frima, tengo una consulta.')" style="background:#25D366;color:#fff;border:none;padding:9px 14px;border-radius:20px;cursor:pointer;font-family:'Jost';font-size:.82rem">💬 Sí, abrir WhatsApp</button></div>`);
+    b.scrollTop=b.scrollHeight;}
+}
+function goWhats(msg){window.open(`https://wa.me/${CONFIG.whatsapp}?text=${encodeURIComponent(msg)}`,"_blank","noopener")}
+
+/* ---- Init ---- */
+document.getElementById("yapeNum").textContent=CONFIG.yapeNumero;
+document.getElementById("yapeName").textContent=CONFIG.yapeTitular;
+const waUrl=`https://wa.me/${CONFIG.whatsapp}?text=${encodeURIComponent("¡Hola Frima! Tengo una consulta.")}`;
+document.getElementById("waFloat").href=waUrl;
+document.getElementById("footWa").href=waUrl;document.getElementById("footWa").target="_blank";
+document.getElementById("mnavWa").href=waUrl;
+document.addEventListener("keydown",e=>{if(e.key==="Escape"){closeQV();closeGuide();closeCheckout();closeCart();closeMenu();closeMsg();closeChat()}});
+
+/* Mensajes rotativos de la barra superior */
+const TOPBAR_MSGS=[
+  CONFIG.envioGratisDesde?`Envío gratis en compras desde ${CONFIG.moneda} ${CONFIG.envioGratisDesde}`:null,
+  "Paga con Yape o tarjeta · Compra segura",
+  "Envíos a todo el Perú · Lima 1–3 días",
+  "Cambios por talla dentro de 7 días",
+].filter(Boolean);
+let tbI=0;
+if(TOPBAR_MSGS.length>1&&!window.matchMedia("(prefers-reduced-motion: reduce)").matches){
+  setInterval(()=>{const el=document.getElementById("topbarMsg");if(!el)return;
+    el.style.opacity="0";
+    setTimeout(()=>{tbI=(tbI+1)%TOPBAR_MSGS.length;el.textContent=TOPBAR_MSGS[tbI];el.style.opacity="1"},420);
+  },5000);
+}
+
+/* ============================================================
+   📦  CATÁLOGO DESDE GOOGLE SHEETS (stock por talla)
+   Columnas esperadas en la hoja:
+   ID | Producto | Categoria | Precio | Foto | S | M | L | XL | 26 | 28 | 30 | 32 | Destacado | Notas
+   - Celda de talla vacía = esa talla no existe en esa prenda.
+   - Celda de talla con número = stock (0 = se muestra "no disponible").
+   ============================================================ */
+const TALLAS_ORDEN=["S","M","L","XL","26","28","30","32"];
+function parseCSV(text){
+  const rows=[];let row=[],val="",q=false;
+  for(let i=0;i<text.length;i++){const c=text[i];
+    if(q){ if(c==='"'){ if(text[i+1]==='"'){val+='"';i++;} else q=false;} else val+=c; }
+    else{ if(c==='"')q=true; else if(c===","){row.push(val);val="";} else if(c==="\n"){row.push(val);rows.push(row);row=[];val="";} else if(c==="\r"){} else val+=c; }
+  }
+  if(val.length||row.length){row.push(val);rows.push(row);}
+  return rows;
+}
+function num(x){const n=parseFloat(String(x).replace(/[^0-9.]/g,""));return isNaN(n)?null:n}
+function parseCatalogoCSV(text){
+  const rows=parseCSV(text).filter(r=>r.length>1);
+  if(rows.length<2)return [];
+  const head=rows[0].map(h=>h.trim().toLowerCase());
+  const col=(name)=>head.indexOf(name);
+  const ci={id:col("id"),nom:col("producto"),cat:col("categoria"),precio:col("precio"),foto:col("foto"),dest:col("destacado"),notas:col("notas")};
+  const sizeCols={};TALLAS_ORDEN.forEach(t=>{const k=head.indexOf(t.toLowerCase());if(k>=0)sizeCols[t]=k;});
+  const out=[];
+  for(let r=1;r<rows.length;r++){
+    const row=rows[r];if(!row||(ci.nom>=0&&!String(row[ci.nom]||"").trim()))continue;
+    const id=ci.id>=0?(parseInt(row[ci.id])||r):r;
+    const tallas=[],disponibles=[],stock={};
+    TALLAS_ORDEN.forEach(t=>{const k=sizeCols[t];if(k===undefined)return;const cell=String(row[k]||"").trim();if(cell==="")return;tallas.push(t);const n=num(cell);stock[t]=(n==null?0:n);if(n>0)disponibles.push(t);});
+    const foto=ci.foto>=0?String(row[ci.foto]||"").trim():"";
+    const imgs=foto?[/^https?:/i.test(foto)?foto:("fotos/catalogo/"+foto)]:[];
+    const precio=ci.precio>=0?(num(row[ci.precio])||0):0;
+    const dest=ci.dest>=0?/^(si|sí|x|true|1)$/i.test(String(row[ci.dest]||"").trim()):false;
+    out.push({id,nombre:(row[ci.nom]||"").trim(),cat:(ci.cat>=0?row[ci.cat]:"").trim()||"Otros",
+      precio,imgs,tallas:tallas.length?tallas:["S","M","L"],disponibles,stock,
+      agotado:tallas.length>0&&disponibles.length===0,featured:dest,
+      desc:(ci.notas>=0?row[ci.notas]:"").trim()});
+  }
+  return out;
+}
+async function initCatalogo(){
+  if(CONFIG.catalogoCSV){
+    try{
+      const txt=await fetch(CONFIG.catalogoCSV,{cache:"no-store"}).then(r=>r.text());
+      const prods=parseCatalogoCSV(txt);
+      if(prods.length){PRODUCTOS.length=0;PRODUCTOS.push(...prods);}
+    }catch(e){console.warn("No se pudo cargar la Hoja de Google; uso el catálogo local.",e);}
+  }
+  sanitizeCartStock();
+  renderFeatured();renderFilters();renderGrid();
+}
+
+// Mostrar/ocultar pago automático según configuración
+if(!CONFIG.mpHabilitado){
+  document.getElementById("mpBox").style.display="none";
+  document.getElementById("manualBox").open=true;
+}
+checkPagoRetorno();
+
+renderCart();
+initCatalogo();
+</script>
+</body>
+</html>
